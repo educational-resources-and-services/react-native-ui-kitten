@@ -32,11 +32,13 @@ export class ShakeAnimation extends Animation<ShakeAnimationConfig, ViewProps> {
 
     const startAnimation: Animated.CompositeAnimation = Animated.timing(this.value, {
       toValue: this.counter % 2 !== 0 ? -offset : offset,
+      useNativeDriver: true,
       ...restConfig,
     });
 
     const endAnimation: Animated.CompositeAnimation = Animated.timing(this.value, {
       toValue: this.counter % 2 !== 0 ? offset : -offset,
+      useNativeDriver: true,
       ...restConfig,
     });
 

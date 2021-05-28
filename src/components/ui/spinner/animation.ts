@@ -52,7 +52,7 @@ export class SpinnerAnimation extends Animation<SpinnerAnimationConfig, SpinnerA
   private arcSize: number;
 
   protected get animation(): Animated.CompositeAnimation {
-    return Animated.timing(this.animationValue, { toValue: 1.0, ...this.config });
+    return Animated.timing(this.animationValue, { toValue: 1.0, useNativeDriver: true, ...this.config });
   }
 
   constructor(arcSize: number, config?: SpinnerAnimationConfig) {

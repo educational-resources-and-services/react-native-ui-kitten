@@ -31,11 +31,13 @@ export class ZoomAnimation extends Animation<ZoomAnimationConfig, ViewProps> {
 
     const startAnimation: Animated.CompositeAnimation = Animated.timing(this.value, {
       toValue: end,
+      useNativeDriver: true,
       ...restConfig,
     });
 
     const endAnimation: Animated.CompositeAnimation = Animated.timing(this.value, {
       toValue: start,
+      useNativeDriver: true,
       ...restConfig,
     });
 
